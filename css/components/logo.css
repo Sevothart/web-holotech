@@ -1,15 +1,6 @@
-.logo-wrapper {
-    transform: scale(0.2, 0.2);
-    width: 500px;
-    height: 150px;
-    overflow: hidden;
- /* Para fazer que a imagem com position-absolute respeite a sua posição consoante este selector, ou evitar que saia do mesmo */
-}
-.logo {
-    width: 500px;
-    /* código abaixo centra a imagem ao centro */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
+.iconDetails {
+    float:  right; 
+    height: 55.5px;
+    width:  160px;
+    border-radius: 6px;
+} 
