@@ -9,19 +9,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Settings stylesheet -->
+    <link rel="stylesheet" href="css/settings/color.css">
+    <link rel="stylesheet" href="css/settings/gap.css">
+
     <!-- After the :root settings, enable webbrowsers generality --> 
     <link rel="stylesheet" href="css/generic/reset.css">
 
     <!-- Components stylesheet -->
     <link rel="stylesheet" href="css/components/model-viewer.css">
-    <link rel="stylesheet" href="css/components/attribution.css">
     <link rel="stylesheet" href="css/components/text-wrapper.css">
     <link rel="stylesheet" href="css/components/logo.css">
 
     <!-- Containers stylesheet -->
     <link rel="stylesheet" href="css/containers/card.css">
     <link rel="stylesheet" href="css/containers/body.css">
-    <link rel="stylesheet" href="css/containers/footer.css">
+    <link rel="stylesheet" href="css/containers/info-container.css">
 
     
     <!-- The following libraries and polyfills are recommended to maximize browser support -->
@@ -45,12 +48,20 @@
 
   <div class = "card">
 
-    <!-- All you need to put beautiful, interactive 3D content on your site: -->
+    <!--
+      NOTES ABOUT MODEL VIEWER PARAMETERS:
+
+      src:      links model used on computers and android devices, with .glb or .gltf extension
+      ios-src:  links model used on iOS devices, with .usdz extension
+      camera-controls:  allow to use fingers or mouse to change camera perspective of the model
+      auto-rotate:  enables model to keep rotating on slow speed if user isn't interacting with the model
+      ar: enables button to AR mode on compatible devices
+    -->
     <model-viewer src="models/building-android.glb"
                   ios-src="models/building-ios.usdz"
                   alt="A 3D model of office"
                   
-                  shadow-intensity="1"
+                  shadow-intensity="10"
                   camera-controls
                   auto-rotate
                   ar
@@ -58,12 +69,12 @@
     </model-viewer>
 
     <div class="info-container">
-      <img src="images/logo2.jpeg" class="iconDetails">
-
       <div class="text-wrapper">
-        <h1>Demonstração planta baixa</h1>
+        <h1>Demonstração empreendimento Dubai</h1>
         <span>Model by Holotech</span>
       </div>
+
+      <img src="images/logo2.jpeg" class="iconDetails">
     </div>
     
   </div>

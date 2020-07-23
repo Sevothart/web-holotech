@@ -1,10 +1,17 @@
+/*
+	margin + max-width maintain card in the horizontal center of the screen
+	border-radius + overflow
+*/
+
 .card {
-	margin: 1em auto; /* space all around card */
+	margin: 0 auto;
+	max-width: 600px;
+
+	border-radius: 6px;
+	overflow: hidden;
+
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
+
 	display: flex;
 	flex-direction: column;
-
-	max-width: 600px;
-	border-radius: 6px;
-	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.75);
-	overflow: hidden; /* TODO: Study this command */
 }
