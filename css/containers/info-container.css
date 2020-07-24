@@ -1,11 +1,8 @@
 .info-container {
     width: auto;
     height: auto;
-
     padding: 1%;
-}
 
-.info-container {
     color: var(--color-first);
     background-color: var(--color-neutral);
 

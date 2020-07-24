@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Holotech</title>
+    <meta charset="utf-8">
+
+    <!-- TODO: Study this two commands -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Settings stylesheet -->
+    <link rel="stylesheet" href="css/settings/color.css">
+    <link rel="stylesheet" href="css/settings/gap.css">
+
+    <!-- After the :root settings, enable webbrowsers generality --> 
+    <link rel="stylesheet" href="css/generic/reset.css">
+
+    <!-- Components stylesheet -->
+    <link rel="stylesheet" href="css/components/model-viewer.css">
+    <link rel="stylesheet" href="css/components/text-wrapper.css">
+    <link rel="stylesheet" href="css/components/logo.css">
+
+    <!-- Containers stylesheet -->
+    <link rel="stylesheet" href="css/containers/card.css">
+    <link rel="stylesheet" href="css/containers/body.css">
+    <link rel="stylesheet" href="css/containers/info-container.css">
+
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+
+    <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+
+    <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script>
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+</head> 
+
+<body>
+
+  <div class = "card">
+
+    <!--
+      NOTES ABOUT MODEL VIEWER PARAMETERS:
+
+      src:      links model used on computers and android devices, with .glb or .gltf extension
+      ios-src:  links model used on iOS devices, with .usdz extension
+      camera-controls:  allow to use fingers or mouse to change camera perspective of the model
+      auto-rotate:  enables model to keep rotating on slow speed if user isn't interacting with the model
+      ar: enables button to AR mode on compatible devices
+    -->
+    <model-viewer src="models/building-android.glb"
+                  ios-src="models/building-ios.usdz"
+                  alt="A 3D model of office"
+                  
+                  shadow-intensity="10"
+                  camera-controls
+                  auto-rotate
+                  ar
+    >
+    </model-viewer>
+
+    <div class="info-container">
+      <div class="text-wrapper">
+        <h1>Demonstração empreendimento Dubai</h1>
+        <span>Model by Holotech</span>
+      </div>
+      <a href="./index.html">
+        <img src="images/logo2.jpeg" class="iconDetails">
+      </a>
+    </div>
+    
+  </div>
+  
+  <!-- 💁 Include both scripts below to support all browsers! -->
+
+  <!-- Loads <model-viewer> for modern browsers: -->
+  <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+  </script>
+
+  <!-- Loads <model-viewer> for old browsers like IE11: -->
+  <script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+  </script>
+</body>
+
+</html>

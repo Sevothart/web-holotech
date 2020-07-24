@@ -1,9 +1,23 @@
 .text-wrapper h1 {
     font-weight: bold;
-    margin: 0 0 0.25em;
+    margin: 0 0 1em;
 }
 
 .text-wrapper {
-    float: left;
-    margin: 10px 0 0 0; /* distance to image */
+    margin: 10px 0 0 0;
+    display: inline-block;
+}
+
+.content-title {
+    font-size: large;
+    font-weight: bold;
+
+    margin: 0 0 1em;
+
+    text-align: center;
+}
+
+.content-link > a {
+    text-decoration: none;
+    color: var(--color-first);
 }
